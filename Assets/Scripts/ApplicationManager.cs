@@ -13,7 +13,7 @@ public class ApplicationManager : MonoBehaviour {
 	
 	private  BlockingCollection<OBDCommand> m_queue;
 	private  bool PreviousConnectionStatus = true;
-	private  bool CurrentStatus = false;
+	public   static bool CurrentStatus = false;
 	public  String IpAddress { get; set; }
 	public  String Port { get; set; }
 	
@@ -97,7 +97,7 @@ public class ApplicationManager : MonoBehaviour {
 
 	public void ConnectToVehicle()
 	{
-		Debug.Log(IpAddress+":"+ Port);
+		
 		OBDJobService.Instance().ConnectToVehicleOBD(IpAddress,Int32.Parse(Port));
 		//StartCoroutine("StartConnectionProcess");
 	}
