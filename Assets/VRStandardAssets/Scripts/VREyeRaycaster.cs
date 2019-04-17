@@ -85,7 +85,7 @@ namespace VRStandardAssets.Utils
 			// Show the debug ray if required
 			if (m_ShowDebugRay)
             {
-				Debug.DrawRay(m_Camera.position, directionObject.position * m_DebugRayLength, Color.blue, m_DebugRayDuration);
+				Debug.DrawRay(m_Camera.position, directionObject.position* m_DebugRayLength, Color.blue);
 			}
 			//Debug.Log(m_CurrentInteractible);
 			// Create a ray that points forwards from the camera.
@@ -134,7 +134,7 @@ namespace VRStandardAssets.Utils
 				
 
 				if (m_Reticle)
-					m_Reticle.SetPosition(directionObject.position*6.0f);
+					m_Reticle.SetPosition(directionObject.position);
 			}
 
 		}

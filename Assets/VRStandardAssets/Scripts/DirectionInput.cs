@@ -11,7 +11,8 @@ namespace VRStandardAssets.Utils
 
 		private void Start()
 		{
-			transform.position = transform.parent.forward * 1f;
+			//transform.position = Camera.main.transform.forward * 1f;
+			transform.position = transform.parent.forward * 6f;
 		}
 		void Update()
 		{
