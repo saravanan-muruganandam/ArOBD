@@ -76,10 +76,17 @@ namespace GoogleARCore.Examples.HelloAR
         /// </summary>
         private bool m_IsQuitting = false;
 
-        /// <summary>
-        /// The Unity Update() method.
-        /// </summary>
-        public void Update()
+		/// <summary>
+		/// Common anchor to link all hte floating graph object
+		/// </summary>
+		private Anchor m_FloatingGraphAnchor;
+
+		/// <summary>
+		/// The Unity Update() method.
+		/// </summary>
+		/// 
+
+		public void Update()
         {
             _UpdateApplicationLifecycle();
 
@@ -218,5 +225,5 @@ namespace GoogleARCore.Examples.HelloAR
                 }));
             }
         }
-    }
+	}
 }

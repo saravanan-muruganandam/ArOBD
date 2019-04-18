@@ -8,6 +8,7 @@ using System.Collections.Generic;
 using UnityEngine.EventSystems;
 using UnityEngine.Events;
 using TMPro;
+using GoogleARCore;
 
 public class ApplicationManager : MonoBehaviour {
 	
@@ -16,7 +17,7 @@ public class ApplicationManager : MonoBehaviour {
 	public   static bool CurrentStatus = false;
 	public  String IpAddress { get; set; }
 	public  String Port { get; set; }
-	
+	private static Anchor m_FloatingGraphAnchor;
 
 	public void Quit () 
 	{
@@ -126,6 +127,20 @@ public class ApplicationManager : MonoBehaviour {
 			OBDJobService.Instance().StopAndRemoveTaskFromJobList(TagName);
 		}
 	}
+	/// <summary>
+	/// Create common anchor to link the floating objects
+	/// </summary>
+	public static GameObject GetAnchorForFloatingObjects()
+	{
+		if (m_FloatingGraphAnchor == null)
+		{
+			Pose pose;
+			pose.position = Camera.main.transform.position + Camera.main.transform.forward * 1f;
+			pose.rotation = Quaternion.LookRotation(pose.position - Camera.main.transform.position);
+			m_FloatingGraphAnchor = Session.CreateAnchor(pose);
+		}
+		return m_FloatingGraphAnchor.gameObject;
+	}
 	IEnumerator StartConnectionProcess()
 	{
 		while (true)
@@ -181,6 +196,8 @@ public class ApplicationManager : MonoBehaviour {
 
 	[SerializeField]
 	private DisconnectEvent OnDisConnected = new DisconnectEvent();
+	
+
 	public DisconnectEvent OnDisConnectedEvent { get { return OnDisConnected; } set { OnDisConnected = value; } }
 	public void OnDisConnectedEventTriggered()
 	{
