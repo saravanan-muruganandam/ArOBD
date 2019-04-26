@@ -661,7 +661,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fdff755c2d6c55148919aa15bd319df2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velAnimacion: 8
+  AnimatioTimer: 0.8
+  TagName: 
+  valueObject: {fileID: 0}
+  ISInitiateGraphOnCLick: 0
 --- !u!114 &114470475155718328
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -673,7 +676,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fdff755c2d6c55148919aa15bd319df2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velAnimacion: 8
+  AnimatioTimer: 0.8
+  TagName: 
+  valueObject: {fileID: 0}
+  ISInitiateGraphOnCLick: 0
 --- !u!114 &114530405077173842
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -712,7 +718,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fdff755c2d6c55148919aa15bd319df2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velAnimacion: 8
+  AnimatioTimer: 0.8
+  TagName: 
+  valueObject: {fileID: 0}
+  ISInitiateGraphOnCLick: 0
 --- !u!114 &114582699909643400
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -776,7 +785,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fdff755c2d6c55148919aa15bd319df2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velAnimacion: 8
+  AnimatioTimer: 0.8
+  TagName: 
+  valueObject: {fileID: 0}
+  ISInitiateGraphOnCLick: 0
 --- !u!114 &114775225197471682
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -788,7 +800,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fdff755c2d6c55148919aa15bd319df2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velAnimacion: 8
+  AnimatioTimer: 0.8
+  TagName: 
+  valueObject: {fileID: 0}
+  ISInitiateGraphOnCLick: 0
 --- !u!114 &114826728265777574
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -924,7 +939,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fdff755c2d6c55148919aa15bd319df2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velAnimacion: 8
+  AnimatioTimer: 0.8
+  TagName: 
+  valueObject: {fileID: 0}
+  ISInitiateGraphOnCLick: 0
 --- !u!222 &222078786711190432
 CanvasRenderer:
   m_ObjectHideFlags: 1

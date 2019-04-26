@@ -89,7 +89,7 @@ namespace VRStandardAssets.Utils
 			}
 			//Debug.Log(m_CurrentInteractible);
 			// Create a ray that points forwards from the camera.
-			// Ray ray = new Ray(m_Camera.position, m_Camera.forward);
+			// Ray ray = new Ray(m_Camera.position, directionObject);
 			Ray ray = new Ray(m_Camera.position, directionObject.position* m_DebugRayLength);
 			RaycastHit hit;
 			// Do the raycast forweards to see if we hit an interactive item
@@ -129,12 +129,10 @@ namespace VRStandardAssets.Utils
                 m_CurrentInteractible = null;
 
 				// Position the reticle at default distance.
-				Vector3 moveVector = (Vector3.right * Input.GetAxis("Horizontal") + Vector3.up * Input.GetAxis("Vertical"));
-				Vector3 rectPosition = m_Camera.forward * 5f ;
-				
+				//Vector3 moveVector = (Vector3.right * Input.GetAxis("Horizontal") + Vector3.up * Input.GetAxis("Vertical"));				
 
 				if (m_Reticle)
-					m_Reticle.SetPosition(directionObject.position);
+					m_Reticle.SetPosition(directionObject.position * m_DebugRayLength);
 			}
 
 		}

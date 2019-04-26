@@ -157,20 +157,17 @@ namespace MoonAntonio.UI
 		{
 			Vector3 initialScale = newGraph.transform.localScale;
 			Vector3 initialPosition = newGraph.transform.position;
-			Vector3 toPosition = Camera.main.transform.position + Camera.main.transform.forward * 1f;
+			//Vector3 toPosition = Camera.main.transform.position + Camera.main.transform.forward * 1f;
+			Vector3 toPosition = Camera.main.transform.position + new Vector3(-initialPosition.x, initialPosition.y, 3.0f);
 			newGraph.transform.localScale = Vector3.zero;
 			float timer = 0.0f;
 
 			while (timer < 3f && newGraph)
-			//while(newGraph.transform.localScale.magnitude < initialScale.magnitude)
 			{
 				newGraph.transform.localScale = Vector3.Lerp(newGraph.transform.localScale, initialScale, timer / 5f);
-				//newGraph.transform.position = Vector3.Lerp(initialPosition, Camera.main.transform.position + new Vector3(-initialPosition.x, initialPosition.y, 3.0f), timer);
 				newGraph.transform.position = Vector3.Lerp(initialPosition, toPosition, timer);
 				newGraph.transform.rotation = Quaternion.LookRotation(newGraph.transform.position - Camera.main.transform.position);
-
 				timer += Time.deltaTime;
-				//Debug.Log("Still Active" + timer);
 				yield return null;
 			}
 

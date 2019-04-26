@@ -45,11 +45,11 @@ namespace MoonAntonio.UI
 				//Debug.Log(currentMenu.transform.localScale);
 			}
 			//Debug.Log(getCurrentPannel());
-			if (Input.GetKeyDown(KeyCode.C))
+			if (Input.GetButtonDown("Cancel"))
 			{
 				CloseCurrentPanel();
 			}
-			if (Input.GetKeyDown(KeyCode.B))
+			if (Input.GetButtonDown("Start"))
 			{
 				if (!InitialMenu.activeSelf)
 				{

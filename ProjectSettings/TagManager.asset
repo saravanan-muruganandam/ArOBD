@@ -7,6 +7,15 @@ TagManager:
   - Aryzon
   - TESTCOMMAND
   - TESTCOMMAND2
+  - Speed
+  - EngineTempetaure
+  - RPM
+  - ThrottlePosition
+  - EngineLoad
+  - MassAirFlow
+  - IntakeAirTemperature
+  - TimingAdvance
+  - FuelPreasure
   layers:
   - Default
   - TransparentFX

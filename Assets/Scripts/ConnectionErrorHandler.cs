@@ -22,7 +22,20 @@ public class ConnectionErrorHandler : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
+		if (Input.anyKey)
+		{
+			foreach (KeyCode kcode in Enum.GetValues(typeof(KeyCode)))
+			{
+				if (Input.GetKey(kcode))
+				{
+					Debug.Log("KeyCode down: " + kcode);
+					ErrorNotificationText.text = kcode.ToString();
+				}
+
+			}
+		}
+
+
 	}
 
 	public bool ChaeckIPandPort()

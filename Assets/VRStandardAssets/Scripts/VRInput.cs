@@ -126,13 +126,21 @@ namespace VRStandardAssets.Utils
 
 			}
 
-			if (Input.GetButtonDown("Start")) {
+			if (Input.GetKey(KeyCode.JoystickButton7)) {
 				Debug.Log("Start");
 				if (OnStart != null)
 				{
 					OnStart();
 				}
 				
+			}
+
+			if (Input.GetKey(KeyCode.JoystickButton6))
+			{
+				if (OnClick != null)
+				{
+					OnClick();
+				}
 			}
 
 		}

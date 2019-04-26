@@ -205,16 +205,16 @@ namespace obd2NET
 				case "RPM":
 					value= CurrentRPM();
 					break;
-				case "ENGINETEMPERATURE":
+				case "EngineTemperatre":
 					value= CurrentEngineTemperature();
 					break;
-				case "FUELPREASURE":
+				case "FuelPreasure":
 					value = CurrentFuelPressure();
 					break;
-				case "ENGINELOAD":
+				case "EngineLoad":
 					value = CurrentEngineLoad();
 					break;
-				case "THROTTLEPOSITION":
+				case "ThrottlePosition":
 					value = CurrentThrottlePosition();
 					break;
 				case "TESTCOMMAND":
